@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane prefWidth="800" prefHeight="500"
+            xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.myproject.artify.DashboardController">
+
+    <!-- Background -->
+    <ImageView fitWidth="800" fitHeight="500" preserveRatio="false"
+               AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+               AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <image>
+            <Image url="@../../../images/artifyheader.jpg" />
+        </image>
+    </ImageView>
+
+    <!-- Top Bar -->
+    <HBox spacing="10" alignment="CENTER_LEFT"
+          style="-fx-background-color: rgba(255,192,203,0.85); -fx-padding: 12;"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+
+        <!-- Welcome Label -->
+        <Label fx:id="lblWelcome"
+               text="Welcome!"
+               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: white;" />
+
+        <Pane HBox.hgrow="ALWAYS" />
+
+        <Button fx:id="btnProfile"
+            text="❤"
+            onAction="#profile"
+            style="-fx-background-color: #ff8fb0;
+                   -fx-text-fill: white;
+                   -fx-font-size: 20px;
+                   -fx-font-weight: bold;
+                   -fx-background-radius: 50%;
+                   -fx-pref-width: 40;
+                   -fx-pref-height: 40;" />
+
+        <!-- Logout Button -->
+        <Button text="Logout"
+                onAction="#handleLogout"
+                style="-fx-background-color: #ff9aae;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 8;
+                       -fx-padding: 7 15;" />
+    </HBox>
+
+    <VBox alignment="CENTER" spacing="18"
+          AnchorPane.topAnchor="150"
+          AnchorPane.leftAnchor="225"
+          style="-fx-background-color: rgba(255,255,255,0.25);
+                 -fx-border-color: rgba(255,255,255,0.4);
+                 -fx-background-radius: 20;
+                 -fx-border-radius: 20;
+                 -fx-padding: 20;"
+          maxWidth="350" maxHeight="250">
+
+        <Label fx:id="lblWelcome2"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white;" />
+
+        <Button text="View Available Workshops"
+                onAction="#workshops"
+                style="-fx-background-color: #ffb6c1;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 10;
+                       -fx-pref-width: 240;
+                       -fx-pref-height: 45;" />
+
+        <Button text="View Booking History"
+                onAction="#history"
+                style="-fx-background-color: #ffc0cb;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 10;
+                       -fx-pref-width: 240;
+                       -fx-pref-height: 45;" />
+    </VBox>
+
+</AnchorPane>

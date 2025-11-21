@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" prefHeight="500" prefWidth="800" style="-fx-background-color: linear-gradient(to bottom right, #ffe4ec, #ffd6e8);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myproject.artify.WorkshopController">
+
+    <!-- HEADER -->
+    <top>
+        <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #ffb6c1; -fx-padding: 20;">
+            <Label style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: white;" text="🎀 Artify Workshops" />
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #ffe6f0;" text="Explore your creativity — pick a workshop below!" />
+        </VBox>
+    </top>
+
+    <!-- CENTER SCROLL AREA -->
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" style="-fx-background: transparent; -fx-background-color: transparent;" vbarPolicy="AS_NEEDED">
+            <content>
+
+                <VBox alignment="TOP_CENTER" spacing="20" style="-fx-padding: 20 20 40 20;">
+
+                    <!-- STATIC CARDS -->
+                    <VBox fx:id="staticCards" spacing="20">
+
+                        <!-- TEMPLATE STYLE FOR ALL THREE -->
+                        <VBox maxWidth="748.0" prefHeight="203.0" prefWidth="746.0" spacing="12" style="-fx-background-color: white;                                      -fx-border-color: #ff9aae;                                      -fx-border-radius: 10;                                      -fx-background-radius: 10;                                      -fx-padding: 18;                                      -fx-effect: dropshadow(gaussian,#f8c2d1,8,0.4,0,2);">
+
+                            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #d6336c;" text="🎨 Watercolor Basics" />
+
+                            <Label style="-fx-font-size: 13px; -fx-text-fill: #7a4b61;" text="Learn to paint using soft strokes and watercolor techniques suitable for beginners." wrapText="true" />
+
+                            <Label style="-fx-font-size: 13px; -fx-text-fill: #a05278;" text="🗓 Every Saturday | 10AM – 12PM" />
+
+                            <Label style="-fx-font-size: 13px; -fx-text-fill: #a05278;" text="💰 RM 50.00" />
+
+                            <Button fx:id="btnWatercolor" onAction="#bookWatercolor" style="-fx-background-color: #ff7da5;                                            -fx-text-fill: white;                                            -fx-font-weight: bold;                                            -fx-padding: 6 20;                                            -fx-background-radius: 6;" text="Book Now" />
+                        </VBox>
+
+                        <!-- DIGITAL ART -->
+                        <VBox maxWidth="745.0" prefHeight="203.0" prefWidth="745.0" spacing="12" style="-fx-background-color: white;                                      -fx-border-color: #ff9aae;                                      -fx-border-radius: 10;                                      -fx-background-radius: 10;                                      -fx-padding: 18;                                      -fx-effect: dropshadow(gaussian,#f8c2d1,8,0.4,0,2);">
+
+                            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #d6336c;" text="💻 Digital Art for Beginners" />
+
+                            <Label style="-fx-font-size: 13px; -fx-text-fill: #7a4b61;" text="Get started with drawing tablets and digital software to bring your art to life." wrapText="true" />
+
+                            <Label style="-fx-font-size: 13px; -fx-text-fill: #a05278;" text="🗓 Every Sunday | 2PM – 4PM" />
+
+                            <Label style="-fx-font-size: 13px; -fx-text-fill: #a05278;" text="💰 RM 60.00" />
+
+                            <Button fx:id="btnDigitalArt" onAction="#bookDigitalArt" style="-fx-background-color: #ff7da5;                                            -fx-text-fill: white;                                            -fx-font-weight: bold;                                            -fx-padding: 6 20;                                            -fx-background-radius: 6;" text="Book Now" />
+                        </VBox>
+
+                        <!-- ACRYLIC -->
+                        <VBox maxWidth="746.0" prefHeight="203.0" prefWidth="745.0" spacing="12" style="-fx-background-color: white;                                      -fx-border-color: #ff9aae;                                      -fx-border-radius: 10;                                      -fx-background-radius: 10;                                      -fx-padding: 18;                                      -fx-effect: dropshadow(gaussian,#f8c2d1,8,0.4,0,2);">
+
+                            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #d6336c;" text="🖌 Acrylic Painting" />
+
+                            <Label style="-fx-font-size: 13px; -fx-text-fill: #7a4b61;" text="Learn layering, texture, and color blending in this fun hands-on acrylic class." wrapText="true" />
+
+                            <Label style="-fx-font-size: 13px; -fx-text-fill: #a05278;" text="🗓 Every Tuesday | 1PM – 3PM" />
+
+                            <Label style="-fx-font-size: 13px; -fx-text-fill: #a05278;" text="💰 RM 55.00" />
+
+                            <Button fx:id="btnAcrylic" onAction="#bookAcrylic" style="-fx-background-color: #ff7da5;                                            -fx-text-fill: white;                                            -fx-font-weight: bold;                                            -fx-padding: 6 20;                                            -fx-background-radius: 6;" text="Book Now" />
+                        </VBox>
+
+                    </VBox>
+
+                    <!-- DYNAMIC WORKSHOPS FROM DB -->
+                    <VBox fx:id="dynamicCards" spacing="20" />
+
+                </VBox>
+
+            </content>
+        </ScrollPane>
+    </center>
+
+    <!-- FOOTER -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 15; -fx-background-color: #ffb6c1;">
+            <Button onAction="#handleBack" style="-fx-background-color: white;                            -fx-text-fill: #d6336c;                            -fx-font-weight: bold;                            -fx-background-radius: 8;                            -fx-border-color: #ff9aae;                            -fx-border-width: 1.5;" text="← Back to Dashboard" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

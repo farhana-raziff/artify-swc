@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.myproject.artify.ProfileController"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color: linear-gradient(to bottom right, #ffe6f0, #ffd9e8);">
+
+    <!-- HEADER -->
+    <top>
+        <VBox alignment="CENTER" spacing="5"
+              style="-fx-background-color: #ffb6c1; -fx-padding: 15;">
+            <Label text="💕 My Profile"
+                   style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: white;" />
+            <Label fx:id="lblUsername"
+                   style="-fx-font-size: 14px; -fx-text-fill: #ffe6f2;" />
+        </VBox>
+    </top>
+
+    <!-- SCROLLABLE CENTER -->
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER"
+                    style="-fx-background-color: transparent;">
+            <VBox alignment="TOP_CENTER" spacing="25"
+                  style="-fx-padding: 25;">
+
+                <!-- PROFILE INFO CARD -->
+                <VBox spacing="12" alignment="CENTER_LEFT"
+                      style="-fx-background-color: white; -fx-padding: 25;
+                             -fx-border-color: #ff9aae; -fx-border-radius: 10;
+                             -fx-background-radius: 10; -fx-pref-width: 450;
+                             -fx-effect: dropshadow(gaussian, #f8c2d1, 8, 0.5, 0, 2);">
+
+                    <Label text="📌 Profile Information"
+                           style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #d6336c;" />
+
+                    <Label fx:id="lblJoinDate" text="Joined: -"
+                           style="-fx-font-size: 14px; -fx-text-fill: #7a4b61;" />
+
+                    <Label fx:id="lblTotalBookings" text="Total Bookings: 0"
+                           style="-fx-font-size: 14px; -fx-text-fill: #7a4b61;" />
+
+                </VBox>
+
+                <!-- LAST 5 BOOKINGS CARD -->
+                <VBox spacing="12" alignment="CENTER_LEFT"
+                      style="-fx-background-color: white; -fx-padding: 25;
+                             -fx-border-color: #ff9aae; -fx-border-radius: 10;
+                             -fx-background-radius: 10; -fx-pref-width: 450;
+                             -fx-effect: dropshadow(gaussian, #f8c2d1, 8, 0.5, 0, 2);">
+
+                    <Label text="📝 Last 5 Bookings"
+                           style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #d6336c;" />
+
+                    <VBox fx:id="listContainer" spacing="8" />
+
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+    <!-- FOOTER -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="10"
+              style="-fx-padding: 10; -fx-background-color: #ffb6c1;">
+            <Button text="← Back to Dashboard" onAction="#handleBack"
+                    style="-fx-background-color: white;
+                           -fx-text-fill: #d6336c;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 8;
+                           -fx-border-color: #ff9aae;
+                           -fx-border-width: 1.5;" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

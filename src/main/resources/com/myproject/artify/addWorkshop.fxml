@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.myproject.artify.AddWorkshopController"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color: linear-gradient(to bottom right, #ffe6f0, #ffd9e8);">
+
+    <!-- HEADER -->
+    <top>
+        <VBox alignment="CENTER" spacing="5"
+              style="-fx-background-color: #ffb6c1; -fx-padding: 15;">
+            <Label text="➕ Add New Workshop"
+                   style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: white;" />
+            <Label text="Fill in the workshop details below."
+                   style="-fx-font-size: 13px; -fx-text-fill: #ffe6f2;" />
+        </VBox>
+    </top>
+
+    <!-- SCROLLABLE CENTER -->
+    <center>
+        <ScrollPane fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="AS_NEEDED"
+                    style="-fx-background-color: transparent;">
+
+            <content>
+                <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+
+                    <!-- White Card -->
+                    <VBox spacing="12"
+                          maxWidth="420"
+                          style="-fx-background-color: white;
+                                 -fx-padding: 25;
+                                 -fx-border-color: #ff9aae;
+                                 -fx-border-radius: 12;
+                                 -fx-background-radius: 12;
+                                 -fx-effect: dropshadow(gaussian, #f8c2d1, 8, 0.5, 0, 2);">
+
+                        <Label text="Workshop Title:" />
+                        <TextField fx:id="txtTitle" promptText="E.g. Watercolor Basics" />
+
+                        <Label text="Description:" />
+                        <TextArea fx:id="txtDescription"
+                                  promptText="E.g. Learn blending techniques"
+                                  prefRowCount="3"
+                                  wrapText="true" />
+
+                        <Label text="Date / Schedule:" />
+                        <TextField fx:id="txtDate" promptText="E.g. Every Saturday" />
+
+                        <Label text="Time:" />
+                        <TextField fx:id="txtTime" promptText="E.g. 10AM - 12PM" />
+
+                        <Label text="Fee (RM):" />
+                        <TextField fx:id="txtFee" promptText="E.g. 50.00" />
+
+                        <!-- Error/Success Message -->
+                        <Label fx:id="lblMessage"
+                               style="-fx-text-fill: #d6336c; -fx-font-size: 12px;" />
+
+                    </VBox>
+
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+    <!-- FOOTER BUTTONS -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="15"
+              style="-fx-padding: 12; -fx-background-color: #ffb6c1;">
+
+            <Button text="Save Workshop"
+                    onAction="#handleSave"
+                    style="-fx-background-color: white;
+                           -fx-text-fill: #d6336c;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 8;
+                           -fx-border-color: #ff9aae;
+                           -fx-border-width: 1.5;" />
+
+            <Button text="← Back"
+                    onAction="#handleBack"
+                    style="-fx-background-color: #ffc0cb;
+                           -fx-text-fill: white;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 8;" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

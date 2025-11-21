@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane prefWidth="800" prefHeight="500"
+            xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.myproject.artify.AdminDashboardController"
+            style="-fx-background-color: linear-gradient(to bottom right, #ffe4ec, #ffd6e8);">
+
+    <VBox alignment="CENTER" spacing="20"
+          AnchorPane.leftAnchor="150"
+          AnchorPane.rightAnchor="150"
+          AnchorPane.topAnchor="80">
+
+        <Label text="🎀 Admin Panel"
+               style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #d6336c;" />
+
+        <Label text="Manage workshops for Artify users."
+               style="-fx-font-size: 14px; -fx-text-fill: #7a4b61;" />
+
+        <Button text="➕ Add New Workshop"
+                onAction="#openAddWorkshop"
+                style="-fx-background-color: #ffb6c1;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 10;
+                       -fx-pref-width: 260;
+                       -fx-pref-height: 40;" />
+
+        <Button text="📋 View All Workshops"
+                onAction="#openWorkshopList"
+                style="-fx-background-color: #ff9aae;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 10;
+                       -fx-pref-width: 260;
+                       -fx-pref-height: 40;" />
+
+        <Button text="Logout"
+                onAction="#logout"
+                style="-fx-background-color: #ffc0cb;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 10;
+                       -fx-pref-width: 260;
+                       -fx-pref-height: 40;" />
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.myproject.artify.AdminWorkshopListController"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color: linear-gradient(to bottom right, #ffe6f0, #ffd9e8);">
+
+    <!-- HEADER -->
+    <top>
+        <VBox alignment="CENTER" spacing="5"
+              style="-fx-background-color: #ffb6c1; -fx-padding: 20;">
+            <Label text="📋 All Workshops"
+                   style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" />
+            <Label text="Admin View Only"
+                   style="-fx-font-size: 14px; -fx-text-fill: #ffe6f2;" />
+        </VBox>
+    </top>
+
+    <!-- TABLE -->
+    <center>
+        <VBox alignment="TOP_CENTER" style="-fx-padding: 20;">
+
+            <TableView fx:id="tableWorkshop"
+                       prefWidth="700" prefHeight="350"
+                       style="-fx-background-radius: 10;
+                              -fx-border-color: #ff9aae;
+                              -fx-border-radius: 10;
+                              -fx-background-color: white;
+                              -fx-effect: dropshadow(gaussian, #f8c2d1, 8, 0.5, 0, 2);">
+
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="colTitle" text="Title" prefWidth="200"/>
+                    <TableColumn fx:id="colDescription" text="Description" prefWidth="250"/>
+                    <TableColumn fx:id="colDate" text="Date" prefWidth="150"/>
+                    <TableColumn fx:id="colTime" text="Time" prefWidth="150"/>
+                    <TableColumn fx:id="colFee" text="Fee (RM)" prefWidth="100"/>
+                    <TableColumn fx:id="colEdit" text="Edit" prefWidth="80"/>
+                </columns>
+
+            </TableView>
+
+        </VBox>
+    </center>
+
+    <!-- BACK BUTTON -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="10"
+              style="-fx-padding: 15; -fx-background-color: #ffb6c1;">
+            <Button text="← Back"
+                    onAction="#handleBack"
+                    style="-fx-background-color: white;
+                           -fx-text-fill: #d6336c;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 8;
+                           -fx-border-color: #ff9aae;
+                           -fx-border-width: 1.5;" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

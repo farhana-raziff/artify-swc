@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.myproject.artify.LoginController"
+            prefWidth="800" prefHeight="500">
+
+    <!-- Background -->
+    <ImageView fitWidth="800" fitHeight="500" preserveRatio="false"
+               AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+               AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <image>
+            <Image url="@../../../images/artifyheader.jpg" />
+        </image>
+    </ImageView>
+
+    <!-- Header -->
+    <VBox alignment="CENTER" spacing="0"
+          AnchorPane.topAnchor="20" AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0">
+        <children>
+            <Text text="ARTIFY"
+                  fill="white"
+                  style="-fx-font-size: 40px; -fx-font-weight: bold;" />
+
+            <Text text="Arts Class and Workshop Reservation"
+                  fill="white"
+                  style="-fx-font-size: 18px; -fx-font-weight: 600;" />
+        </children>
+    </VBox>
+
+    <!-- Login Card -->
+    <VBox alignment="CENTER" spacing="15"
+          maxWidth="350" minWidth="350"
+          maxHeight="320" minHeight="320"
+          AnchorPane.topAnchor="150"
+          AnchorPane.leftAnchor="225"
+          style="-fx-background-color: rgba(255,255,255,0.25);
+                 -fx-border-color: rgba(255,255,255,0.4);
+                 -fx-background-radius: 20;
+                 -fx-border-radius: 20;
+                 -fx-padding: 20;">
+
+        <TextField fx:id="txtUsername"
+                   prefWidth="250"
+                   promptText="Username"
+                   style="-fx-background-radius: 8;
+                          -fx-background-color: rgba(255,255,255,0.8);" />
+
+        <PasswordField fx:id="txtPassword"
+                       prefWidth="250"
+                       promptText="Password"
+                       style="-fx-background-radius: 8;
+                              -fx-background-color: rgba(255,255,255,0.8);" />
+
+        <Button fx:id="btnLogin"
+                text="Login"
+                onAction="#handleLogin"
+                prefWidth="140"
+                style="-fx-background-color: #ffb6c1;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 8;" />
+
+        <Label fx:id="lblMessage"
+               textFill="red"
+               style="-fx-font-size: 12px;" />
+
+        <!-- Register link -->
+        <Hyperlink text="Don't have an account? Register"
+                   onAction="#goToRegister"
+                   style="-fx-text-fill: white;" />
+
+    </VBox>
+
+</AnchorPane>
