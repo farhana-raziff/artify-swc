@@ -21,37 +21,37 @@ This system replaces manual booking methods with a centralized digital platform,
 ## 📸 Screenshots
 
 ### Sign Up Page
-![Sign Up](images/signup.png)
+![Sign Up](https://github.com/farhana-raziff/artify-swc/blob/main/signup.png)
 
 ### Login Page
-![Login](images/login.png)
+![Login](https://github.com/farhana-raziff/artify-swc/blob/main/login.png)
 
 ### User Dashboard
-![Dashboard](images/dashboard.png)
+![Dashboard](https://github.com/farhana-raziff/artify-swc/blob/main/dashboard.png)
 
 ### Workshop List
-![Workshop List](images/workshops.png)
+![Workshop List](https://github.com/farhana-raziff/artify-swc/blob/main/workshops.png)
 
 ### Booking Page
-![Booking](images/booking.png)
+![Booking](https://github.com/farhana-raziff/artify-swc/blob/main/booking.png)
 
 ### Booking History
-![History](images/history.png)
+![History](https://github.com/farhana-raziff/artify-swc/blob/main/history.png)
 
 ### Profile Page
-![Profile](images/profile.png)
+![Profile](https://github.com/farhana-raziff/artify-swc/blob/main/profile.png)
 
 ### Admin Dashboard
-![Admin Dashboard](images/admin-dashboard.png)
+![Admin Dashboard](https://github.com/farhana-raziff/artify-swc/blob/main/admin-dashboard.png)
 
 ### Add New Workshop
-![Add Workshop](images/add-workshop.png)
+![Add Workshop](https://github.com/farhana-raziff/artify-swc/blob/main/add-workshop.png)
 
 ### View All Workshops
-![Workshop List](images/admin-workshops.png)
+![Workshop List](https://github.com/farhana-raziff/artify-swc/blob/main/admin-workshops.png)
 
 ### Edit Workshop
-![Edit Workshop](images/edit-workshop.png)
+![Edit Workshop](https://github.com/farhana-raziff/artify-swc/blob/main/edit-workshop.png)
 
 ## 📚 Lessons Learned
 I learned how to connect JavaFX with MySQL, handle scene navigation, and design clean interfaces using FXML.
