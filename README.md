@@ -19,7 +19,39 @@ This system replaces manual booking methods with a centralized digital platform,
 - DAO pattern for database operations
 
 ## 📸 Screenshots
-*(Add images of your UI here)*
+
+### Sign Up Page
+![Sign Up](images/signup.png)
+
+### Login Page
+![Login](images/login.png)
+
+### User Dashboard
+![Dashboard](images/dashboard.png)
+
+### Workshop List
+![Workshop List](images/workshops.png)
+
+### Booking Page
+![Booking](images/booking.png)
+
+### Booking History
+![History](images/history.png)
+
+### Profile Page
+![Profile](images/profile.png)
+
+### Admin Dashboard
+![Admin Dashboard](images/admin-dashboard.png)
+
+### Add New Workshop
+![Add Workshop](images/add-workshop.png)
+
+### View All Workshops
+![Workshop List](images/admin-workshops.png)
+
+### Edit Workshop
+![Edit Workshop](images/edit-workshop.png)
 
 ## 📚 Lessons Learned
 I learned how to connect JavaFX with MySQL, handle scene navigation, and design clean interfaces using FXML.
